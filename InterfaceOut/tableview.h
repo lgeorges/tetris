@@ -1,7 +1,7 @@
 #ifndef TABLEVIEW_H
 #define TABLEVIEW_H
 
-#include "tablecolor.h"
+#include "InterfaceOut/tablecolor.h"
 #include "constantes.h"
 
 class TableView
