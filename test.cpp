@@ -1,5 +1,5 @@
-#include "tableview.h"
-#include "tablecolor.h"
+#include "InterfaceOut/tableview.h"
+#include "InterfaceOut/tablecolor.h"
 
 void testFullFillTableView(TableView* table){
     int h = table->getHeight();

@@ -1,9 +1,9 @@
 #ifndef TETROMINO_H
 #define TETROMINO_H
 
-#include"position.h"
+#include"Core/position.h"
 #include<vector>
-#include"tablecolor.h"
+#include"InterfaceOut/tablecolor.h"
 
 class Tetromino
 {

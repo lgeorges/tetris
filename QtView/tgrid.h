@@ -4,9 +4,9 @@
 #include <QGridLayout>
 #include <QWidget>
 
-#include "tcell.h"
+#include "QtView/tcell.h"
 #include "constantes.h"
-#include "tableview.h"
+#include "InterfaceOut/tableview.h"
 
 
 class TGrid : public QWidget

@@ -2,7 +2,7 @@
 #define TCELL_H
 
 #include <QWidget>
-#include "tablecolor.h"
+#include "InterfaceOut/tablecolor.h"
 
 
 class TCell : public QWidget

@@ -3,8 +3,8 @@
 
 #include <QObject>
 #include <QTimer>
-#include "game.h"
-#include "tframe.h"
+#include "Core/game.h"
+#include "QtView/tframe.h"
 
 class TGame : public QObject
 {

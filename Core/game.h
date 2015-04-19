@@ -1,9 +1,9 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "tetrominomodelt.h"
-#include "tableview.h"
-#include "ground.h"
+#include "Core/tetrominomodelt.h"
+#include "InterfaceOut/tableview.h"
+#include "Core/ground.h"
 
 
 class Game

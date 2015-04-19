@@ -1,7 +1,7 @@
 #ifndef TETROMINOMODELT_H
 #define TETROMINOMODELT_H
 
-#include"tetromino.h"
+#include"Core/tetromino.h"
 #include"constantes.h"
 
 

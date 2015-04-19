@@ -2,9 +2,9 @@
 #define TFRAME_H
 
 #include <QWidget>
-#include "tableview.h"
-#include "tgrid.h"
-#include "game.h"
+#include "InterfaceOut/tableview.h"
+#include "QtView/tgrid.h"
+#include "Core/game.h"
 
 class TFrame : public QWidget
 {

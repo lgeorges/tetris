@@ -1,7 +1,7 @@
 #include <QApplication>
 //#include <QDebug>
 
-#include "tgame.h"
+#include "QtView/tgame.h"
 
 int main(int argc, char *argv[])
 {

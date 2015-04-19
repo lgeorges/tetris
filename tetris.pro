@@ -24,6 +24,7 @@ SOURCES += main.cpp \
     Core/ground.cpp
 
 HEADERS += \
+    constantes.h \
     QtView/tcell.h \
     QtView/tframe.h \
     QtView/tgrid.h \
@@ -34,5 +35,4 @@ HEADERS += \
     Core/tetromino.h \
     Core/tetrominomodelt.h \
     Core/game.h \
-    Core/constantes.h \
     Core/ground.h
