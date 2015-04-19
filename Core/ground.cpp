@@ -2,9 +2,9 @@
 #include <iostream>
 
 
-Ground::Ground()
+Ground::Ground():Block()
 {
-    this->positions= new vector<Position*>();
+//    this->positions= new vector<Position*>();
 }
 
 void Ground::addPiece(Tetromino * tetromino)
@@ -22,9 +22,8 @@ bool Ground::isTouching(Tetromino * tetromino)
     vector<Position*>::iterator indexGround;
     vector<Position*>::iterator indexPiece;
     vector<Position*> * positionsPiece= tetromino->getPositions();
-    for(indexPiece=positionsPiece->begin(); indexPiece != positionsPiece->end(); indexPiece ++){
 
-//        cout<<(*indexPiece)->getY()<<"\n";
+    for(indexPiece=positionsPiece->begin(); indexPiece != positionsPiece->end(); indexPiece ++){
 
         if((*indexPiece)->getY()==0)
             return true;
@@ -37,7 +36,7 @@ bool Ground::isTouching(Tetromino * tetromino)
     return false;
 }
 
-vector<Position *> *Ground::getPositions() const
-{
-    return positions;
-}
+//vector<Position *> *Ground::getPositions() const
+//{
+//    return positions;
+//}

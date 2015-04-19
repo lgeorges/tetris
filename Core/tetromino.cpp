@@ -1,8 +1,9 @@
 #include "tetromino.h"
+#include "iostream"
 
-Tetromino::Tetromino()
+Tetromino::Tetromino():Block()
 {
-    this->positions=new std::vector<Position *>();
+//    this->super();
 }
 TableColor *Tetromino::getColor() const
 {
@@ -25,6 +26,6 @@ void Tetromino::down(){
     }
 }
 
-std::vector <Position *>* Tetromino::getPositions(){
-    return positions;
-}
+//std::vector <Position *>* Tetromino::getPositions(){
+//    return positions;
+//}

@@ -3,22 +3,21 @@
 
 #include<vector>
 #include"Core/tetromino.h"
-//#include<position.h>
+#include"Core/block.h"
+#include"Core/position.h"
 
 
 using namespace std;
 
-class Ground
+class Ground: public Block
 {
-private:
-    vector<Position*> *positions;
 
 public:
     Ground();
     void addPiece(Tetromino *);
     bool isTouching(Tetromino *);
 
-    vector<Position *> *getPositions() const;
+//    vector<Position *> *getPositions() const;
 };
 
 #endif // GROUND_H

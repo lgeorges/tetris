@@ -21,7 +21,8 @@ SOURCES += main.cpp \
     Core/tetromino.cpp \
     Core/tetrominomodelt.cpp \
     Core/game.cpp \
-    Core/ground.cpp
+    Core/ground.cpp \
+    Core/block.cpp
 
 HEADERS += \
     constantes.h \
@@ -35,4 +36,5 @@ HEADERS += \
     Core/tetromino.h \
     Core/tetrominomodelt.h \
     Core/game.h \
-    Core/ground.h
+    Core/ground.h \
+    Core/block.h
