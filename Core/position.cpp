@@ -29,3 +29,15 @@ void Position::down(){
         y=y-1;
 }
 
+void Position::right()
+{
+    if(x<W_TABLE-1)
+        x=x+1;
+}
+
+void Position::left()
+{
+    if(x>0)
+        x=x-1;
+}
+

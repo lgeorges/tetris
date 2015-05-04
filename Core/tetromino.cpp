@@ -26,6 +26,40 @@ void Tetromino::down(){
     }
 }
 
-//std::vector <Position *>* Tetromino::getPositions(){
-//    return positions;
-//}
+void Tetromino::right()
+{
+    if(moveRightPossible()){
+        for(unsigned int i=0; i<this->positions->size(); i++){
+            positions->at(i)->right();
+        }
+    }
+}
+
+void Tetromino::left()
+{
+    if(moveLeftPossible()){
+        for(unsigned int i=0; i<this->positions->size(); i++){
+            positions->at(i)->left();
+        }
+    }
+}
+
+
+bool Tetromino::moveRightPossible()
+{
+    for(unsigned int i=0; i<this->positions->size(); i++){
+        if(positions->at(i)->getX()==W_TABLE-1)
+            return false;
+    }
+    return true;
+}
+
+bool Tetromino::moveLeftPossible()
+{
+    for(unsigned int i=0; i<this->positions->size(); i++){
+        if(positions->at(i)->getX()==0)
+            return false;
+    }
+    return true;
+}
+

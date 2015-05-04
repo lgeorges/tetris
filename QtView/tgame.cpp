@@ -8,7 +8,7 @@ TGame::TGame(QObject *parent) :
 
     TableView* table = game->getGameView();
 
-    frame = new TFrame(table);
+    frame = new TFrame(table, game);
     frame->show();
     frame->updateFrame();
     QTimer *timer = new QTimer(this);

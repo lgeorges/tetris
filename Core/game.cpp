@@ -50,3 +50,21 @@ void Game::next()
     this->updateView();
 }
 
+void Game::right()
+{
+    currentPiece->right();
+    this->updateView();
+}
+
+void Game::left()
+{
+    currentPiece->left();
+    this->updateView();
+}
+
+void Game::rotate()
+{
+    currentPiece->rotate();
+}
+
+

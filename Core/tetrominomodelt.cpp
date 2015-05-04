@@ -1,4 +1,5 @@
 #include "tetrominomodelt.h"
+#include "iostream"
 
 TetrominoModelT::TetrominoModelT()
 {
@@ -12,4 +13,9 @@ TetrominoModelT::TetrominoModelT()
     positions->push_back(new Position(m,height-2));
 
     this->color=new TableColor(0,0,255);
+}
+
+void TetrominoModelT::rotate()
+{
+    std::cout<<"tetromino rotate\n";
 }

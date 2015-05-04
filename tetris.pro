@@ -22,7 +22,8 @@ SOURCES += main.cpp \
     Core/tetrominomodelt.cpp \
     Core/game.cpp \
     Core/ground.cpp \
-    Core/block.cpp
+    Core/block.cpp \
+    QtCommand/tcommandpanel.cpp
 
 HEADERS += \
     constantes.h \
@@ -37,4 +38,5 @@ HEADERS += \
     Core/tetrominomodelt.h \
     Core/game.h \
     Core/ground.h \
-    Core/block.h
+    Core/block.h \
+    QtCommand/tcommandpanel.h

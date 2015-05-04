@@ -28,8 +28,9 @@ bool Ground::isTouching(Tetromino * tetromino)
         if((*indexPiece)->getY()==0)
             return true;
         for(indexGround=this->positions->begin(); indexGround!=this->positions->end(); indexGround++){
-            if((*indexPiece)->getY()<=(*indexGround)->getY()+1)
-                return true;
+            if((*indexPiece)->getX()==(*indexGround)->getX())
+                if((*indexPiece)->getY()<=(*indexGround)->getY()+1)
+                    return true;
         }
 
     }

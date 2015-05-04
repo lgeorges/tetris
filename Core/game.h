@@ -15,6 +15,9 @@ public:
     TableView *getGameView() const;
     void setGameView(TableView *value);
     void next();
+    void right();
+    void left();
+    void rotate();
 
 private:
     Tetromino* currentPiece;
