@@ -17,11 +17,12 @@ public:
     void down();
     void right();
     void left();
-    virtual void rotate() = 0;
+    void rotate();
 
 protected:
     void setColor(TableColor *value);
     void setPositions(std::vector <Position *> *positions);
+    Position* centre;
 //    std::vector <Position *> *positions;
 //    TableColor* color;
 

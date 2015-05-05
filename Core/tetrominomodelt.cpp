@@ -9,13 +9,9 @@ TetrominoModelT::TetrominoModelT()
 
     positions->push_back(new Position(m-1,height-1));
     positions->push_back(new Position(m+1,height-1));
-    positions->push_back(new Position(m,height-1));
+    centre=new Position(m,height-1);
+    positions->push_back(centre);
     positions->push_back(new Position(m,height-2));
 
     this->color=new TableColor(0,0,255);
-}
-
-void TetrominoModelT::rotate()
-{
-    std::cout<<"tetromino rotate\n";
 }

@@ -9,7 +9,6 @@ class TetrominoModelT : public Tetromino
 {
 public:
     TetrominoModelT();
-    void rotate();
 };
 
 #endif // TETROMINOMODELT_H
