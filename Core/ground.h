@@ -16,6 +16,10 @@ public:
     Ground();
     void addPiece(Tetromino *);
     bool isTouching(Tetromino *);
+private:
+    bool isAFullLine();
+    void deleteLine();
+
 
 //    vector<Position *> *getPositions() const;
 };
