@@ -5,6 +5,7 @@
 #include "InterfaceOut/tableview.h"
 #include "Core/ground.h"
 
+using namespace std;
 
 class Game
 {

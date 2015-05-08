@@ -15,7 +15,7 @@ TableView *Game::getGameView() const
 }
 
 void Game::updateView(){
-   std::vector<Position *> *positionsPiece=this->currentPiece->getPositions();
+   vector<Position *> *positionsPiece=this->currentPiece->getPositions();
    Position * p;
    gameView->cleanAll();
    for(unsigned int i=0; i < positionsPiece->size(); i++){
@@ -23,12 +23,12 @@ void Game::updateView(){
        gameView->setCell(p->getX(),p->getY(),new TableColor(currentPiece->getColor()));
    }
 
-   std::vector<Position *> *positionsGround=this->ground->getPositions();
-   for(unsigned int i=0; i < positionsGround->size(); i++){
-       p=positionsGround->at(i);
-       gameView->setCell(p->getX(),p->getY(),new TableColor(currentPiece->getColor()));
+   list<Position *> *positionsGround=this->ground->getPositions();
+   list<Position*>::iterator index;
+
+   for(index=positionsGround->begin(); index!=positionsGround->end(); index++){
+       gameView->setCell((*index)->getX(),(*index)->getY(),new TableColor(currentPiece->getColor()));
    }
-//   ground->addPiece(currentPiece);
 }
 
 void Game::setGameView(TableView *value)
