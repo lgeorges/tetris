@@ -7,6 +7,13 @@
 #include<vector>
 #include"InterfaceOut/tablecolor.h"
 
+//#include "Core/tetrominomodelt.h"
+//#include "Core/tetrominomodell.h"
+//#include "Core/tetrominomodellinv.h"
+//#include "Core/tetrominomodeli.h"
+//#include "Core/tetrominomodels.h"
+//#include "Core/tetrominomodelsinv.h"
+
 class Tetromino
 {
 public:

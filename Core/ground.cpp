@@ -60,8 +60,10 @@ void Ground::deleteLine(int numLine)
             (*indexGround)->down();
     }
     cout<<"end delete \n";
-    for(int i=0;i<count;i++)
+    for(int i=0;i<count;i++){
         this->positions->remove(tab[i]);
+        delete tab[i];
+    }
 }
 
 list<Position *> *Ground::getPositions() const

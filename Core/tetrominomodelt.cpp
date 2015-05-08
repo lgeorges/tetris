@@ -14,5 +14,5 @@ TetrominoModelT::TetrominoModelT():Tetromino()
 
 
 
-    this->color=new TableColor(0,0,255);
+    this->color=new TableColor(255,0,0);
 }

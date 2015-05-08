@@ -107,4 +107,3 @@ vector<Position *> *Tetromino::getPositions() const
 {
     return positions;
 }
-
