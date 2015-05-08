@@ -7,7 +7,14 @@
 #include<vector>
 #include"InterfaceOut/tablecolor.h"
 
-class Tetromino: public Block
+//#include "Core/tetrominomodelt.h"
+//#include "Core/tetrominomodell.h"
+//#include "Core/tetrominomodellinv.h"
+//#include "Core/tetrominomodeli.h"
+//#include "Core/tetrominomodels.h"
+//#include "Core/tetrominomodelsinv.h"
+
+class Tetromino
 {
 public:
     Tetromino();
@@ -18,8 +25,11 @@ public:
     void right();
     void left();
     void rotate();
+    vector<Position *> *getPositions() const;
 
 protected:
+    vector<Position*> *positions;
+    TableColor* color;
     void setColor(TableColor *value);
     void setPositions(std::vector <Position *> *positions);
     Position* centre;

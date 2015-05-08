@@ -4,7 +4,7 @@
 Game::Game()
 {
     this->gameView = new TableView();
-    this->currentPiece= new TetrominoModelT();
+    this->currentPiece= randomTetromino();
     this->ground= new Ground();
     this->updateView();
 }
@@ -15,7 +15,7 @@ TableView *Game::getGameView() const
 }
 
 void Game::updateView(){
-   std::vector<Position *> *positionsPiece=this->currentPiece->getPositions();
+   vector<Position *> *positionsPiece=this->currentPiece->getPositions();
    Position * p;
    gameView->cleanAll();
    for(unsigned int i=0; i < positionsPiece->size(); i++){
@@ -23,12 +23,12 @@ void Game::updateView(){
        gameView->setCell(p->getX(),p->getY(),new TableColor(currentPiece->getColor()));
    }
 
-   std::vector<Position *> *positionsGround=this->ground->getPositions();
-   for(unsigned int i=0; i < positionsGround->size(); i++){
-       p=positionsGround->at(i);
-       gameView->setCell(p->getX(),p->getY(),new TableColor(currentPiece->getColor()));
+   list<Position *> *positionsGround=this->ground->getPositions();
+   list<Position*>::iterator index;
+
+   for(index=positionsGround->begin(); index!=positionsGround->end(); index++){
+       gameView->setCell((*index)->getX(),(*index)->getY(),new TableColor(128,128,128));
    }
-//   ground->addPiece(currentPiece);
 }
 
 void Game::setGameView(TableView *value)
@@ -42,7 +42,7 @@ void Game::next()
     {
         ground->addPiece(currentPiece);
         delete currentPiece;
-        this->currentPiece= new TetrominoModelT();
+        this->currentPiece= randomTetromino();
     }
     else
         this->currentPiece->down();
@@ -65,6 +65,35 @@ void Game::left()
 void Game::rotate()
 {
     currentPiece->rotate();
+}
+
+Tetromino *Game::randomTetromino()
+{
+    int i;
+    int nombre_aleatoire;
+    float borne_minimale = 0;
+    float borne_maximale = 6;
+    srand(time(NULL));
+    nombre_aleatoire = (int) rand() * (borne_maximale+1 - borne_minimale) / RAND_MAX + borne_minimale;
+
+    switch (nombre_aleatoire) {
+    case 0:
+       return new TetrominoModelI();
+    case 1:
+        return new TetrominoModelT();
+    case 2:
+        return new TetrominoModelL();
+    case 3:
+        return new TetrominoModelLInv();
+    case 4:
+        return new TetrominoModelS();
+    case 5:
+        return new TetrominoModelSInv();
+    case 6:
+        return new TetrominoModelC();
+    default:
+        return new TetrominoModelI();
+    }
 }
 
 
